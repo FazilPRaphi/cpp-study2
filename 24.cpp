@@ -1,0 +1,39 @@
+#include<iostream>
+#include<vector>
+#include<list>
+using namespace std;
+class Graph{
+    public:
+    int V;
+    list<int>* l;
+
+ 
+Graph(int V){
+    this->V=V;
+    l=new list<int> [V];
+
+}
+void addElement(int u,int v){
+    l[u].push_back(v);
+    l[v].push_back(u);
+}
+void printGraph(){
+    for(int i=0;i<V;i++){
+        cout<<i<<"->";
+        for(int x : l[i]){
+            cout<<x<< " ";
+        }
+        cout<<"\n";
+    }
+}
+};
+int main(){
+    Graph graph(6);
+    graph.addElement(0,1);
+    graph.addElement(1,2);
+    graph.addElement(2,3);
+    graph.addElement(3,4);
+    graph.addElement(4,5);
+    graph.printGraph();
+    return 0;
+}

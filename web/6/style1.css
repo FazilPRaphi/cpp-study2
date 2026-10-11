@@ -1,0 +1,11 @@
+#hero{
+    color:rgb(72, 133, 212);
+    font-family: 'Courier New', Courier, monospace;
+}
+.userbtn{
+    background-color: skyblue;
+}
+#searchbtn{
+    background-color: black;
+    color: aliceblue;
+}
